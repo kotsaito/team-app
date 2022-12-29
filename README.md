@@ -35,10 +35,10 @@ https://docs.google.com/spreadsheets/d/1fKUvOnCOvCILf-R0Jszedvkao_FnK2A51ukQpzSH
 
 
 # データベース設計
-[](ER%E5%9B%B3.dio)
+![](../../Downloads/ER%E5%9B%B3.png)
 
 # 画面遷移図
-[](%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3.dio)
+![](../../Downloads/%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3.png)
 
 # 開発環境
 ・Ruby
