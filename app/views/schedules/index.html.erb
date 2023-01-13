@@ -1,2 +1,9 @@
-<h1>Schedules#index</h1>
-<p>Find me in app/views/schedules/index.html.erb</p>
+<%= render "shared/header" %>
+
+<main>
+  <%= month_calendar do |date| %>
+  <%= date.day %>
+  <% end %>
+</main>
+
+<%= render "shared/footer" %>
