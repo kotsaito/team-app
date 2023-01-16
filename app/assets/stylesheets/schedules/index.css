@@ -2,3 +2,12 @@ main {
   background: #ffffff;
   flex: 1;
 }
+
+.new-schedule {
+  background-color: blue;
+  width: 120px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  color: #ffffff;
+}
