@@ -2,8 +2,8 @@
    <div class = "header-main">
     <div class = "header-left">team-app</div>
     <div class = "header-right">
-      <div class = "user-name">user-name</div>
-      <div class = "logout">ログアウト</div>
+      <div class = "user-name"><%= current_user.name %></div>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'logout'%>
     </div>
    </div>
 </header>
