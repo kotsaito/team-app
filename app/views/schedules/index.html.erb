@@ -1,7 +1,9 @@
 <%= render "shared/header" %>
 
 <main>
-  <div class = "new-schedule">新規予定作成</div>
+  <div class = "new-schedule">
+  <%= link_to "新規予定作成", new_schedule_path, class: 'new-schedule'%>
+  </div>
   <%= month_calendar do |date| %>
   <%= date.day %>
   <% end %>
