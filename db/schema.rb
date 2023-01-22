@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2023_01_13_160409) do
     t.string "person"
     t.text "practice"
     t.text "others"
+    t.text "feedback"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

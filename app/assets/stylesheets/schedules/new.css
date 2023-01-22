@@ -8,24 +8,29 @@
 }
 
 .title {
-  width: 400px;
+  width: 500px;
 }
 
 .place {
-  width: 400px;
+  width: 500px;
 }
 
 .person {
-  width: 400px;
+  width: 500px;
 }
 
 .practice {
-  width: 400px;
+  width: 500px;
 }
 
 .others {
-  width: 400px;
+  width: 500px;
+}
+
+.feedback {
+  width: 500px;
 }
 
 .submit {
-  margin: 10px 0px;
+  margin: 10px 0;
+}

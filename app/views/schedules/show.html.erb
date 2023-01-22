@@ -10,7 +10,7 @@
 
     <div class ="schedule-show-set">
       <div class ="schedule-show-title">日時</div>
-      <div class = schedule-show-box><%= @schedule.start_time %></div>
+      <div class = schedule-show-box><%= @schedule.start_time.strftime("%Y-%m-%d %H:%M:%S") %></div>
     </div>
 
     <div class ="schedule-show-set">
@@ -23,14 +23,14 @@
       <div class = schedule-show-box><%= @schedule.person %></div>
     </div>
 
-  <div class ="schedule-show-set">
+    <div class ="schedule-show-set">
       <div class ="schedule-show-title">練習メニュー</div>
       <div class = schedule-show-longbox><%= simple_format(@schedule.practice) %></div>
     </div>
 
     <div class ="schedule-show-set">
       <div class ="schedule-show-title">その他</div>
-      <div class = schedule-show-longbox><%= simple_format(@schedule.others) %></div>
+      <div class = schedule-show-middlebox><%= simple_format(@schedule.others) %></div>
     </div>
 
     <%= link_to "編集", edit_schedule_path, class: 'edit'%>
