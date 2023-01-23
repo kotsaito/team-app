@@ -33,7 +33,19 @@
       <div class = schedule-show-middlebox><%= simple_format(@schedule.others) %></div>
     </div>
 
-    <%= link_to "編集", edit_schedule_path, class: 'edit'%>
+    <div class="comments">
+      <h4>＜コメント一覧＞</h4>
+      <% @comments.each do |comment| %>
+        <p>
+          <strong><%= comment.user.name %>：</strong>
+          <%= simple_format(comment.text) %>
+        </p>
+      <% end %>
+    </div>
+
+    <%= link_to "コメントする", new_schedule_comment_path(@schedule.id), class: 'button'%>
+
+    <%= link_to "編集", edit_schedule_path, class: 'button'%>
 
     <%= link_to "戻る", root_path, class: 'back'%>
 
