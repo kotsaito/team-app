@@ -2,7 +2,7 @@ class SchedulesController < ApplicationController
   before_action :set_schedule, only: [:show, :edit, :update, :destroy]
 
   def index
-    @schedules = Schedule.order('start_time DESC')
+    @schedules = Schedule.order('start_time ASC')
   end
 
   def new

@@ -17,3 +17,17 @@ main {
   color: blue;
   text-decoration: none;
 }
+
+.recent-schedule {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.recent-schedule-box {
+  margin-bottom: 10px;
+  width: 400px;
+  border: solid 1px gray;
+  border-radius: 10px;
+}
+
