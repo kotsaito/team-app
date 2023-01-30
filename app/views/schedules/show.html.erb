@@ -47,6 +47,8 @@
 
     <%= link_to "編集", edit_schedule_path, class: 'button'%>
 
+     <%= link_to "削除", schedule_path(@schedule.id), method: :delete, class: 'button' %>
+
     <%= link_to "戻る", root_path, class: 'back'%>
 
   </div>
