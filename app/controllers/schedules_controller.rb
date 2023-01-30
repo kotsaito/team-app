@@ -1,8 +1,10 @@
 class SchedulesController < ApplicationController
   before_action :set_schedule, only: [:show, :edit, :update, :destroy]
+  before_action :redirect_root, only: [:edit]
 
   def index
-    @schedules = Schedule.order('start_time ASC')
+    @calendars = Schedule.order('start_time ASC')
+    @schedules = Schedule.where("start_time > ?",Date.today).order('start_time ASC')
   end
 
   def new
@@ -36,6 +38,7 @@ class SchedulesController < ApplicationController
   end
 
   def destroy
+    redirect_to root_path if @schedule.destroy && current_user.id == @schedule.user_id
   end
 
 
@@ -47,6 +50,10 @@ class SchedulesController < ApplicationController
 
   def set_schedule
     @schedule = Schedule.find(params[:id])
+  end
+ 
+  def redirect_root
+    redirect_to root_path unless current_user.id == @schedule.user_id 
   end
 
 end

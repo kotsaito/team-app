@@ -20,12 +20,12 @@
   <div class = "new-schedule">
   <%= link_to "新規予定作成", new_schedule_path, class: 'new-schedule'%>
   </div>
-  <%= month_calendar events: @schedules do |date, schedules| %>
+  <%= month_calendar events: @calendars do |date, calendars| %>
     <%= date.day %>
 
-    <% schedules.each do |schedule| %>
+    <% calendars.each do |calendar| %>
       <div>
-        <%= link_to schedule.title, schedule_path(schedule.id), class: 'calendar-schedule'%>
+        <%= link_to calendar.title, schedule_path(calendar.id), class: 'calendar-schedule'%>
       </div>
     <% end %>
   <% end %>
