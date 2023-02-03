@@ -1,6 +1,6 @@
 <div class="side-top">
   <div class="user-name">
-    <%= link_to current_user.name, edit_user_path(current_user) %>
+    <%= current_user.name %>
   </div>
   <div class="create-chat">
     <%= link_to"チャットを作成する",  new_room_path %>
