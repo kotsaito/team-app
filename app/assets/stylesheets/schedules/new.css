@@ -1,0 +1,36 @@
+.new-schedule-form {
+  display: flex;
+  justify-content: center;
+}
+
+.weight-bold-text {
+  margin-top: 10px;
+}
+
+.title {
+  width: 500px;
+}
+
+.place {
+  width: 500px;
+}
+
+.person {
+  width: 500px;
+}
+
+.practice {
+  width: 500px;
+}
+
+.others {
+  width: 500px;
+}
+
+.feedback {
+  width: 500px;
+}
+
+.submit {
+  margin: 10px 0;
+}

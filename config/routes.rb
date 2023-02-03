@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  devise_for :users
+  resources :schedules do
+    resources :comments, only: [:new, :create, :destroy]
+  end
+  root to: "schedules#index"
+  resources :rooms, only: [:index, :new, :create, :destroy] do
+    resources :messages, only: [:index, :create]
+  end
 end

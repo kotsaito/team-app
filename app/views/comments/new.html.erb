@@ -1,0 +1,17 @@
+<%= render "shared/header" %>
+
+<div class ="main">
+   <div class = "comment-form">
+      <%= form_with(model: [@schedule, @comment], local: true)  do |f| %>
+         <%= f.text_area :text, placeholder: "コメント・フィードバック等", size: "70x15" %>
+         <div class="submit">
+        <%= f.submit %>
+      </div>
+
+      <%= link_to "戻る",schedule_path(@schedule.id) , class: 'back'%>
+      <% end %>
+   </div>
+</div>
+
+<%= render "shared/footer" %>
+

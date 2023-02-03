@@ -1,0 +1,9 @@
+<header>
+   <div class = "header-main">
+   <%= link_to "team-app", root_path, class: 'header-left'%>
+    <div class = "header-right">
+      <div class = "user-name"><%= current_user.name %></div>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'logout'%>
+    </div>
+   </div>
+</header>

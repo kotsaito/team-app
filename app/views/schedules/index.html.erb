@@ -1,0 +1,35 @@
+<%= render "shared/header" %>
+
+<div class="main">
+  <div class="recent-schedule" >
+    <h4>＜直近の予定＞</h4>
+    <% @schedules.each do |schedule| %>
+    <div class="recent-schedule-box">
+      <%=  schedule.start_time.strftime('%-m/%d %H:%M') %>
+      <%=  schedule.title %>
+      <div class = person >
+      参加者：
+      <%= schedule.person %>
+      <%= link_to "詳細",schedule_path(schedule.id), class: 'show-buttan'%>
+      </div>
+    </div>
+    <%end%>
+  </div>
+  
+
+  <div class = "new-schedule">
+  <%= link_to "新規予定作成", new_schedule_path, class: 'new-schedule'%>
+  </div>
+  <%= month_calendar events: @calendars do |date, calendars| %>
+    <%= date.day %>
+
+    <% calendars.each do |calendar| %>
+      <div>
+        <%= link_to calendar.title, schedule_path(calendar.id), class: 'calendar-schedule'%>
+      </div>
+    <% end %>
+  <% end %>
+
+</div>
+
+<%= render "shared/footer" %>

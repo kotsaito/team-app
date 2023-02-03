@@ -1,0 +1,33 @@
+main {
+  background: #ffffff;
+  flex: 1;
+}
+
+.new-schedule {
+  background-color: blue;
+  width: 120px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.calendar-schedule {
+  color: blue;
+  text-decoration: none;
+}
+
+.recent-schedule {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.recent-schedule-box {
+  margin-bottom: 10px;
+  width: 400px;
+  border: solid 1px gray;
+  border-radius: 10px;
+}
+

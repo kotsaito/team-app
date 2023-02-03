@@ -1,0 +1,48 @@
+<%= render "shared/header" %>
+
+<div class ="main">
+  <div class = "new-schedule-form">
+    <%= form_with(model: @schedule, local: true) do |f| %>
+
+      <div class="weight-bold-text">
+          件名
+      </div>
+      <%= f.text_field :title, class:"title", id:"title", placeholder:"件名" %>
+
+      <div class="weight-bold-text">
+        日時
+      </div>
+      <%= f.datetime_select :start_time, class:"start_time", id:"start_time" %>
+
+      <div class="weight-bold-text">
+          場所
+      </div>
+      <%= f.text_area :place, class:"place", id:"place", placeholder:"場所" ,rows:"2" %>
+
+
+      <div class="weight-bold-text">
+          参加者
+      </div>
+      <%= f.text_field :person, class:"person", id:"person", placeholder:"参加者" %>
+
+      <div class="weight-bold-text">
+          練習メニュー
+      </div>
+      <%= f.text_area :practice, class:"practice", id:"practice", placeholder:"練習メニュー" ,rows:"7" ,maxlength:"1000" %>
+
+      <div class="weight-bold-text">
+          その他
+      </div>
+      <%= f.text_area :others, class:"others", id:"others", placeholder:"その他連絡事項等" ,rows:"4" ,maxlength:"1000" %>
+      
+      <div class="submit">
+        <%= f.submit %>
+      </div>
+
+      <%= link_to "戻る", schedule_path(@schedule.id), class: 'back'%>
+
+    <% end %>
+  </div>
+</div>
+
+<%= render "shared/footer" %>
