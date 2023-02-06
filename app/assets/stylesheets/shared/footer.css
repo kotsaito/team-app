@@ -7,13 +7,13 @@ footer {
   justify-content: center;
 }
 
-.calendar {
+.calendar-image {
   width: 50px;
   height: 50px;
   margin-right: 100px;
 }
 
-.comment {
+.chat-image {
   width: 50px;
   height: 50px;
 }

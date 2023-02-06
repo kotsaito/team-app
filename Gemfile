@@ -56,3 +56,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'simple_calendar', '~> 2.0' 
 gem 'devise'
 gem 'rounding'
+gem 'mini_magick'
+gem 'image_processing', '~> 1.2'
