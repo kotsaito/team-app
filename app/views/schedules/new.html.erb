@@ -4,6 +4,8 @@
   <div class = "new-schedule-form">
     <%= form_with(model: @schedule, local: true) do |f| %>
 
+      <%= render 'shared/error_messages', model: f.object %>
+
       <div class="weight-bold-text">
           件名
       </div>
