@@ -10,8 +10,8 @@ team-app
 
 
 # テスト用アカウント
-・Basic認証パスワード：user
-・Basic認証ID：0000
+・Basic認証パスワード：0000
+・Basic認証ID：user
 ・メールアドレス：user1@mail.com
 ・パスワード:user1
 ・
