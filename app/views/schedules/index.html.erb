@@ -3,17 +3,23 @@
 <div class="main">
   <div class="recent-schedule" >
     <h4>＜直近の予定＞</h4>
-    <% @schedules.each do |schedule| %>
-    <div class="recent-schedule-box">
-      <%=  schedule.start_time.strftime('%-m/%d %H:%M') %>
-      <%=  schedule.title %>
-      <div class = person >
-      参加者：
-      <%= schedule.person %>
-      <%= link_to "詳細",schedule_path(schedule.id), class: 'show-buttan'%>
+    <% unless @schedule %>
+      <div class = "dummy">
+        直近の予定はありません
       </div>
-    </div>
-    <%end%>
+    <% else %>  
+      <% @schedules.each do |schedule| %>
+        <div class="recent-schedule-box">
+          <%=  schedule.start_time.strftime('%-m/%d %H:%M') %>
+          <%=  schedule.title %>
+          <div class = person >
+          参加者：
+          <%= schedule.person %>
+          <%= link_to "詳細",schedule_path(schedule.id), class: 'show-buttan'%>
+          </div>
+        </div>
+      <%end%>
+    <% end %>
   </div>
   
 
