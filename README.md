@@ -53,3 +53,85 @@ https://docs.google.com/spreadsheets/d/1fKUvOnCOvCILf-R0Jszedvkao_FnK2A51ukQpzSH
 
 
 [def]: ../../Downloads/ER%E5%9B%B3.png
+
+
+
+## users テーブル
+| Column             | Type   | Options                   |
+| ------------------ | ------ | ------------------------- |
+| name               | string | null: false               |
+| email              | string | null: false, unique: true |
+| encrypted_password | string | null: false               |
+
+##Association
+- has_many :schedules
+- has_many :comments
+- has_many :room_users
+- has_many :rooms, through: :room_users
+- has_many :messages
+
+
+## schedule テーブル
+
+| Column     | Type       | Options                        |
+| ---------- | ---------- | ------------------------------ |
+| start_time | datetime   | null: false                    |
+| title      | string     | null: false                    |
+| place      | string     |                                |
+| person     | string     |                                |
+| practice   | string     |                                |
+| others     | string     |                                |
+| user       | references | null: false, foreign_key: true |
+
+##Association
+- belongs_to :user
+- has_many :comments
+
+## comments テーブル
+
+| Column     | Type       | Options                        |
+| ---------- | ---------- | ------------------------------ |
+| text       | text       | null: false                    |
+| schedule   | references | null: false, foreign_key: true |
+| user       | references | null: false, foreign_key: true |
+
+##Association
+- belongs_to :user
+- belongs_to :schedule
+
+## rooms テーブル
+
+| Column | Type   | Options     |
+| ------ | ------ | ----------- |
+| name   | string | null: false |
+
+### Association
+
+- has_many :room_users
+- has_many :users, through: :room_users
+- has_many :messages
+
+## room_users テーブル
+
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| user   | references | null: false, foreign_key: true |
+| room   | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :room
+- belongs_to :user
+
+## messages テーブル
+
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| content | string     |                                |
+| user    | references | null: false, foreign_key: true |
+| room    | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :room
+- belongs_to :user
