@@ -13,7 +13,7 @@ team-app
 ・Basic認証パスワード：0000
 ・Basic認証ID：user
 ・メールアドレス：user1@mail.com
-・パスワード:user1
+・パスワード:user1111
 ・
 # 利用方法
 #　練習日新規投稿
