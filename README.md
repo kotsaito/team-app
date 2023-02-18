@@ -11,13 +11,19 @@ https://team-app-38239.onrender.com/
 
 # テスト用アカウント
 ・Basic認証パスワード：0000
+
 ・Basic認証ID：user
+
  user1
+
 ・メールアドレス：user1@mail.com
+
 ・パスワード:user1111
 
 user2
+
 ・メールアドレス：user2@mail.com
+
 ・パスワード:user2222
 
 # 利用方法
