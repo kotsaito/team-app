@@ -11,8 +11,12 @@
           <%=  schedule.start_time.strftime('%-m/%d %H:%M') %>
           <%=  schedule.title %>
           <div class = person >
+          <% if schedule.person.present? %>
           参加者：
           <%= schedule.person %>
+          <% else %>  
+          未定
+          <% end %>
           <%= link_to "詳細",schedule_path(schedule.id), class: 'show-buttan'%>
           </div>
         </div>

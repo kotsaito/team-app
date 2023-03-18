@@ -4,7 +4,7 @@ class CreateSchedules < ActiveRecord::Migration[6.0]
       t.datetime   :start_time,        null: false
       t.string     :title,             null: false
       t.string     :place  
-      t.string     :person
+      t.string     :person             
       t.text       :practice
       t.text       :others
       t.references :user,              null: false, foreign_key: true
